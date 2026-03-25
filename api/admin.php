@@ -183,8 +183,8 @@ function logSecurityEvent($userId, $eventType, $details = null) {
     }
 }
 
-// Helper to validate admin.php access
-function validateadmin.phpAccess($userId) {
+// Helper to validate admin access
+function validateAdminAccess($userId) {
     global $pdo;
     
     try {
@@ -271,9 +271,9 @@ $pathSegments = explode('/', trim($path, '/'));
 // Get action from path (e.g., /api/admin.php/users -> 'users')
 $action = $pathSegments[2] ?? '';
 
-// Validate admin.php session
+// Validate admin session
 $userInfo = validateSession();
-if (!validateadmin.phpAccess($userInfo['user_id'])) {
+if (!validateAdminAccess($userInfo['user_id'])) {
     jsonResponse(false, 'Insufficient permissions', null, 403, 'INSUFFICIENT_PERMISSIONS');
 }
 
