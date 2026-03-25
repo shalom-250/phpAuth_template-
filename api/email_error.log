@@ -1,0 +1,2 @@
+Too few arguments to function EmailSender::sendPasswordResetEmail(), 3 passed in C:\xampp\htdocs\security_template\api\auth.php on line 1042 and exactly 4 expected
+Too few arguments to function EmailSender::sendPasswordResetEmail(), 3 passed in C:\xampp\htdocs\security_template\api\auth.php on line 1042 and exactly 4 expected
